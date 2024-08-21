@@ -1,0 +1,280 @@
+.sobre_section {
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.sobre_tit {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Estilo para o vídeo */
+.video-frame {
+    margin-top: 20px;
+    border: 2px solid #000; /* Borda preta em volta do vídeo */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que o vídeo não ultrapasse a borda */
+    width: 50%; /* Define a largura do contêiner do vídeo como 50% */
+    margin-left: auto; /* Centraliza o contêiner horizontalmente */
+    margin-right: auto; /* Centraliza o contêiner horizontalmente */
+}
+
+video {
+    display: block;
+    width: 100%; /* Faz o vídeo ocupar a largura total do contêiner */
+    height: auto; /* Mantém a proporção do vídeo */
+}
+
+/* Estilo para a seção "Nossas Ações" */
+#nossas-acoes {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px; /* Bordas arredondadas */ 
+}
+
+#nossas-acoes h1 {
+    font-size: 32px; 
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estiliza o título das ações */
+#nossas-acoes h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 100px;
+}
+
+/* Estiliza o título das ações */
+#nossas-acoes h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estiliza o título das ações */
+#nossas-acoes h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container das imagens */
+.imagens-container {
+    display: flex;
+    justify-content: center; /* Centraliza o container */
+    gap: 150px; /* Espaçamento reduzido entre as imagens */
+}
+
+/* Estiliza o contêiner das imagens */
+.imagens-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o container */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte se necessário */
+}
+
+/* Estiliza o contêiner das imagens */
+.imagens-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o container */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte se necessário */
+}
+
+/* Estiliza as imagens */
+.imagens-container img {
+    width: 20%; 
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estiliza a seção das ações */
+.acoes {
+    text-align: center; /* Centraliza o título e o texto das imagens */
+    margin-bottom: 40px; /* Adiciona espaço abaixo da seção das ações */
+}
+
+/* Estiliza o título das ações */
+.acoes h1 {
+    font-size: 2rem; 
+    margin-top: 60px; /* Adiciona espaço acima do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-weight: bold;
+}
+
+/* Estiliza o container das imagens */
+.imagens-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas */
+    justify-content: center; /* Centraliza as imagens no container */
+    gap: 20px; /* Espaçamento entre as imagens */
+}
+
+/* Estiliza os itens individuais das imagens */
+.imagem-item {
+    display: flex;
+    flex-direction: column; /* Coloca o texto abaixo da imagem */
+    align-items: center; /* Centraliza a imagem e o texto */
+    margin-bottom: 40px; /* Adiciona espaço abaixo de cada imagem */
+}
+
+/* Estiliza as imagens */
+.imagens-container img {
+    width: 150px; 
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove qualquer espaçamento indesejado abaixo da imagem */
+    filter: sepia(100%) hue-rotate(90deg) saturate(800%); /* Inverte as cores para verde */
+    transition: filter 0.3s ease; /* Adiciona uma transição suave ao efeito de hover */
+}
+
+/* Estiliza o texto das legendas das imagens */
+.imagem-texto {
+    margin-top: 10px; /* Espaçamento acima do texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Adiciona efeito de hover às imagens */
+.imagens-container img:hover {
+    filter: brightness(0) saturate(100%) invert(40%) sepia(80%) saturate(5000%) hue-rotate(120deg) brightness(50%) contrast(120%); /* Verde bem escuro */
+}
+
+/* Ajuste do container para telas menores */
+@media (max-width: 768px) {
+    .imagens-container {
+        flex-direction: column; /* Coloca as imagens em coluna em telas menores */
+        align-items: center; /* Centraliza as imagens na coluna */
+    }
+
+    .imagens-container img {
+        width: 90%; /* Ajusta o tamanho das imagens em telas menores */
+    }
+}
+
+/* Estiliza a seção do mascote */
+.mascote {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    gap: 20px; /* Espaço entre as divs */
+    margin-bottom: 40px; /* Espaço abaixo da seção do mascote */
+    padding-top: 100px;
+}
+
+/* Estiliza o título 'Nosso Mascote' */
+.mascote h1 {
+    font-size: 2rem; /* Tamanho do título */
+    font-weight: bold; /* Título em negrito */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estiliza a div da imagem do mascote */
+.mascote .imagem-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estiliza a imagem do mascote */
+.mascote .imagem-div img {
+    width: 300px; /* Ajusta o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+    margin-bottom: 10px; /* Espaço abaixo da imagem para o título */
+}
+
+/* Estiliza o título 'Quokkinha' */
+.mascote .imagem-div h1 {
+    font-size: 2rem; /* Tamanho do título igual ao 'Nosso Mascote' */
+    font-weight: bold; /* Título em negrito */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+/* Estiliza o texto descritivo do mascote */
+.mascote .texto-div {
+    max-width: 500px; /* Limita a largura do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Espaço acima dos títulos */
+.mascote h1 {
+    margin-top: 60px; /* Ajusta o espaço acima do título */
+}
+
+/* Estiliza a seção "Nosso MVV" */
+.mvv {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.mvv h1 {
+    font-size: 2.5rem; 
+    margin-top: 40px;  /* Espaçamento acima do título */
+    font-weight: bold;
+    margin-bottom: 60px;
+    padding-top: 100px;
+}
+
+/* Estiliza o container dos cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estiliza os cards */
+.card {
+    border: 2px solid #86c232; /* Borda verde um pouco mais claro */
+    border-radius: 15px;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease-in-out; /* Suaviza o efeito de hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do card no hover */
+}
+
+/* Estiliza o ícone dentro dos cards */
+.card-icon {
+    display: block;
+    margin: 0 auto 10px; /* Centraliza o ícone */
+    width: 30px; /* Tamanho do ícone */
+    height: auto;
+}
+
+/* Estiliza o título dos cards */
+.card-title {
+    font-size: 1.5rem;
+    color: #86c232; /* Cor igual à borda */
+    font-weight: bold;
+    margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+/* Estiliza o texto dos cards */
+.card p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    text-align: left; /* Alinhamento do texto */
+}
+
+/* Ajuste do layout dos cards para telas menores */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Alinha os cards em coluna para telas menores */
+        align-items: center; /* Centraliza os cards na coluna */
+        gap: 20px; /* Espaçamento entre os cards */
+    }
+
+    .card {
+        width: 90%; /* Deixa os cards mais largos e centrados */
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Reduz o tamanho do título para caber melhor em telas pequenas */
+    }
+
+    .card p {
+        font-size: 1rem; /* Ajusta o tamanho do texto para telas menores */
+    }
+}

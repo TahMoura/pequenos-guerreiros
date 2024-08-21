@@ -1,0 +1,160 @@
+/* Título da seção de eventos */
+.events_section h1 {
+    font-size: 2.5em; 
+    font-weight: bold;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 50px; /* Espaço abaixo do título */
+    color: var(--white); /* Cor do texto */
+    animation: zoomIn 1s ease-in-out; /* Aplicar a animação */
+    padding-top: 60px;
+}
+
+/* Animação de zoom */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Seção de Eventos */
+.events_section {
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.events_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+    gap: 20px; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza a seção */
+}
+
+/* Estilo dos cards */
+.card {
+    border: 1px solid #03b550;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #03b550;
+    text-align: center;
+    padding: 20px;
+    min-height: 500px; /* Altura mínima para acomodar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da imagem dos cards */
+.card img {
+    width: 50%;
+    height: 150px; 
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo do título do card */
+.card a h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card a h3:hover {
+    color: green; /* Cor do título ao passar o mouse */
+}
+
+/* Estilo da informação do card */
+.card-info {
+    font-size: 0.8em; /* Tamanho do texto menor */
+    color: #888; /* Cor do texto em cinza */
+    margin: 10px 0;
+}
+
+/* Estilo da descrição do card */
+.card-description {
+    font-size: 1em;
+    color: #333;
+    overflow: auto; /* Adiciona uma barra de rolagem se o conteúdo ultrapassar a altura */
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    /* Reduz a fonte do título da seção em telas menores */
+    .events_section h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    /* Ajuste para 2 cards por linha em tablets */
+    .events_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Ajuste da altura do card e imagem em telas menores */
+    .card {
+        min-height: 450px; /* Altura mínima reduzida para telas menores */
+        padding: 15px;
+    }
+
+    .card img {
+        height: 120px; /* Altura da imagem reduzida */
+        width: 70%; /* Aumenta a largura da imagem em telas menores */
+    }
+
+    /* Ajuste no tamanho da fonte dentro do card */
+    .card a h3 {
+        font-size: 1.3em;
+    }
+
+    .card-description {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Reduz a fonte do título da seção em celulares */
+    .events_section h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    /* Ajuste para 1 card por linha em celulares */
+    .events_container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste da altura do card e imagem em telas menores */
+    .card {
+        min-height: auto; /* Permite que a altura do card se ajuste ao conteúdo */
+        padding: 10px;
+    }
+
+    .card img {
+        height: 100px; /* Altura da imagem reduzida */
+        width: 100%; /* Aumenta a largura da imagem em telas menores */
+    }
+
+    /* Ajuste no tamanho da fonte dentro do card */
+    .card a h3 {
+        font-size: 1.2em;
+    }
+
+    .card-description {
+        font-size: 0.9em;
+    }
+}
