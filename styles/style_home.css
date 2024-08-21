@@ -142,6 +142,22 @@ button, a {
     margin: 0 0 0 16px; 
 }
 
+/* Estilos adicionais para o botão de menu */
+.menu_toggle {
+    display: none; /* Esconde o botão em telas grandes */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Esconder o menu em telas pequenas */
+@media (max-width: 768px) {
+    .menu_lista {
+        display: none;
+    }
+}
+
 /* HOME */
 .home_container {
     position: relative; /* Necessário para o posicionamento do overlay */
@@ -177,27 +193,38 @@ h4 {
 }
 
 .home_container h2 {
-    font-weight: bold;
+    font-weight: 400;
+    font-size: 36px;
     margin: 16px 0;
     color: var(--white);
 }
 
 .home_container h1 {
-    font-size: 36px;
-    line-height: 48px;  /* definindo o tamanho da linha */
+    font-size: 60px;
+    letter-spacing: 5px;
+    line-height: 55px;  /* definindo o tamanho da linha */
     font-weight: bold;
     color: var(--white); /* Define a cor do título como branca */
+}
+
+.home_content .btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 18px;
+    background-color: var(--green-500);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.home_content .btn:hover {
+    background-color: var(--green-800);
 }
 
 .home_container p {
     margin: 16px 0;
     color: var(--white);
-}
-
-.home_container .btn {
-    width: 40%; /* o botão terá 40% da largura do container/elemento/tag que o envolve, no caso do home_container */
-    color: var(--white);
-    border: 1px solid var(--white); /* Borda do botão */
 }
 
 .home_content {
@@ -644,59 +671,91 @@ h4 {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 0 20px; /* Adiciona padding para garantir espaço dentro da seção */
+    /* Removido o padding horizontal para evitar overflow */
+    padding: 0;
+    max-width: 800px; /* Define uma largura máxima para melhor aparência */
+    margin: 0 auto; /* Centraliza o contêiner */
 }
 
 .depoimentos-track {
     display: flex;
-    transition: transform 1.5s ease;
-    width: 100%; /* Garante que a track ocupe toda a largura disponível */
+    transition: transform 0.5s ease;
+    width: 100%;
 }
 
 .depoimentos-card {
-    flex: 0 0 100%; /* Cada card ocupará 100% da largura do contêiner */
-    max-width: 100%; /* Garante que o card não ultrapasse a largura máxima */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+    flex: 0 0 calc(100% - 30px); /* Considera as margens laterais */
+    box-sizing: border-box;
     padding: 20px;
-    margin: 0 15px; /* Espaçamento entre os cards */
-    border: 2px solid #4CAF50; /* Borda verde médio */
+    margin: 0 15px;
+    border: 2px solid #4CAF50;
     border-radius: 10px;
     background-color: #f9f9f9;
     color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para o texto dos cards */
+.depoimentos-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
 .depoimentos-card h3 {
     font-weight: bold;
-    color: #4CAF50; /* Verde médio */
+    color: #4CAF50;
+    margin-bottom: 5px;
 }
 
 .depoimentos-card h6 {
-    color: #888888; /* Cinza */
+    color: #888888;
     font-size: 0.9em;
+    margin: 0;
 }
 
 /* Botões de navegação */
 .depoimentos-button {
-    background: #f1f1f1;
+    background: rgba(255, 255, 255, 0.8);
     border: none;
     padding: 10px;
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10; /* Garantir que o botão fique sobre os cards */
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 1.5em;
+    color: #4CAF50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.depoimentos-button:hover {
+    background: #4CAF50;
+    color: #fff;
 }
 
 .depoimentos-prev {
-    left: 10px; 
+    left: 10px;
 }
 
 .depoimentos-next {
-    right: 10px; 
+    right: 10px;
 }
 
+/* Responsividade */
+@media (max-width: 600px) {
+    .depoimentos-card {
+        padding: 15px;
+        margin: 0 10px;
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    .depoimentos-button {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+}
 
 /* CONTATO */
 .contato_container {

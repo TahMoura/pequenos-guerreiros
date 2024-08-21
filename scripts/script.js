@@ -67,24 +67,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('.depoimentos-prev');
     const nextButton = document.querySelector('.depoimentos-next');
     const cards = Array.from(track.children);
-    const cardWidth = cards[0].getBoundingClientRect().width; // Apenas a largura do card
-
-    let index = 0;
+    let currentIndex = 0;
 
     function updateCarousel() {
-        const offset = -index * cardWidth;
+        const cardWidth = track.clientWidth;
+        const offset = -currentIndex * cardWidth;
         track.style.transform = `translateX(${offset}px)`;
     }
 
     nextButton.addEventListener('click', () => {
-        index = (index + 1) % cards.length;
+        currentIndex = (currentIndex + 1) % cards.length;
         updateCarousel();
     });
 
     prevButton.addEventListener('click', () => {
-        index = (index - 1 + cards.length) % cards.length;
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         updateCarousel();
     });
+
+    // Atualiza o carrossel ao redimensionar a janela para manter a responsividade
+    window.addEventListener('resize', updateCarousel);
+
+    // Inicializa o carrossel na posição correta
+    updateCarousel();
 });
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
