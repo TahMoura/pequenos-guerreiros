@@ -243,6 +243,39 @@ h4 {
     transition: 0.2s ease-in-out;
 }
 
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .home_container {
+        height: auto; /* Ajusta a altura para conteúdo flexível */
+        padding: 20px; /* Adiciona um pouco de padding para o conteúdo não encostar nas bordas */
+    }
+
+    .home_container h1 {
+        font-size: 36px; /* Reduz o tamanho da fonte para títulos */
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+
+    .home_container h2 {
+        font-size: 24px; /* Reduz o tamanho da fonte para subtítulos */
+        margin: 10px 0;
+    }
+
+    .home_content {
+        width: 90vw; /* Aumenta a largura do conteúdo para ocupar mais espaço */
+        text-align: center;
+    }
+
+    .home_content .btn {
+        font-size: 16px; /* Reduz o tamanho da fonte do botão */
+        padding: 12px 30px;
+    }
+
+    .home_content_img {
+        width: 90%; /* Ajusta a largura da imagem */
+    }
+}
+
 /* SOBRE */
 .sobre_container {
     max-width: 1120px;
